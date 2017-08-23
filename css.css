@@ -23,12 +23,13 @@ body {
 }
 
 .date-block {
-  background: white;
+  background: rgba(255, 255, 255, 1);
   display: flex;
   padding: 5px 0;
   justify-content: center;
   height: 24px;
   align-items: center;
+  transition: all .3s;
 }
 
 .date-block p {
@@ -83,7 +84,9 @@ body {
 }
 
 .fixed-top {
+  background: rgba(255, 255, 255, 0.6);
   position: fixed;
   top: 0;
   width: 100%;
+  transition: all .3s;
 }

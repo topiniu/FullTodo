@@ -20,20 +20,22 @@ var root = new Vue({
     self.everyListScrollTop[0] = 0;
     self.everyListScrollTop[1] = self.everyListHeight[1];
     for (var p = 2; p < self.everyListHeight.length; p++) {
-      self.everyListScrollTop[p] = self.everyListHeight[i - 1] + self.everyListHeight[i - 2];
+      self.everyListScrollTop[p] = self.everyListHeight[p - 1] + self.everyListScrollTop[p - 1];
     }
+    console.log(self.everyListHeight);
+    console.log(self.everyListScrollTop);
 
     var topIndex = -1;
     $(window).on('scroll', function () {
+      if ($(window).scrollTop() === 0) {
+        $('.j_date-block').removeClass('fixed-top');
+        topIndex = -1;
+      }
       for (var i = 0; i < self.everyListHeight.length - 1; i++) {
         console.log(self.everyListScrollTop[i + 1] + "--" + self.everyListScrollTop[i]);
         if (i !== topIndex && $(window).scrollTop() < self.everyListScrollTop[i + 1] && $(window).scrollTop() > self.everyListScrollTop[i]) {
-          // $('.j_date-list-container').eq(1).css('padding-top', '0');
           $('.j_date-block').removeClass('fixed-top');
-
-          // $('.j_date-list-container').eq(i).css('padding-top', '34px');
-          $('.j_date-list-container').eq(i).find('.j_date-block').addClass('fixed-top')
-          console.log('pp');
+          $('.j_date-list-container').eq(i).find('.j_date-block').addClass('fixed-top');
           topIndex = i;
         }
       }
