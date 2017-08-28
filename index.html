@@ -20,298 +20,13 @@
   </svg>
   <div id="root">
     <div class="list-container j_list-container">
-      <div class="date-list-container j_date-list-container">
+      <div class="date-list-container j_date-list-container" v-for="(value, key) in items">
         <div class="date-block j_date-block">
-          <p class="date-block-text j_date-block-text">2017年8月1日</p>
+          <p class="date-block-text j_date-block-text">{{ key }}</p>
         </div>
-        <div class="list-item j_list-item">
+        <div class="list-item j_list-item" v-for="item in value">
           <div class="left-container">
-            <p>如果可以飞檐走壁哈哈哈早上还是大太阳下午就下大雨了天空好蓝啊哈哈哈哈但是我要呆在家里好难受啊</p>
-          </div>
-          <div class="right-container">
-            <a class="edit-btn j_edit-btn">
-              <svg class="func-icon" viewbox="0 0 528.899 528.899">
-                <use xlink:href="#edit"></use>
-              </svg>
-            </a>
-            <a class="del-btn j_del-btn">
-              <svg class="func-icon" viewbox="0 0 459 459">
-                <use xlink:href="#del"></use>
-              </svg>
-            </a>
-          </div>
-          <div class="clear"></div>
-        </div>
-        <div class="list-item j_list-item">
-          <div class="left-container">
-            <p>如果可以飞檐走壁哈哈哈早上还是大太阳下午就下大雨了天空好蓝啊哈哈哈哈但是我要呆在家里好难受啊</p>
-          </div>
-          <div class="right-container">
-            <a class="edit-btn j_edit-btn">
-              <svg class="func-icon" viewbox="0 0 528.899 528.899">
-                <use xlink:href="#edit"></use>
-              </svg>
-            </a>
-            <a class="del-btn j_del-btn">
-              <svg class="func-icon" viewbox="0 0 459 459">
-                <use xlink:href="#del"></use>
-              </svg>
-            </a>
-          </div>
-          <div class="clear"></div>
-        </div>
-        <div class="list-item j_list-item">
-          <div class="left-container">
-            <p>如果可以飞檐走壁哈哈哈早上还是大太阳下午就下大雨了天空好蓝啊哈哈哈哈但是我要呆在家里好难受啊</p>
-          </div>
-          <div class="right-container">
-            <a class="edit-btn j_edit-btn">
-              <svg class="func-icon" viewbox="0 0 528.899 528.899">
-                <use xlink:href="#edit"></use>
-              </svg>
-            </a>
-            <a class="del-btn j_del-btn">
-              <svg class="func-icon" viewbox="0 0 459 459">
-                <use xlink:href="#del"></use>
-              </svg>
-            </a>
-          </div>
-          <div class="clear"></div>
-        </div>
-        <div class="list-item j_list-item">
-          <div class="left-container">
-            <p>如果可以飞檐走壁哈哈哈早上还是大太阳下午就下大雨了天空好蓝啊哈哈哈哈但是我要呆在家里好难受啊</p>
-          </div>
-          <div class="right-container">
-            <a class="edit-btn j_edit-btn">
-              <svg class="func-icon" viewbox="0 0 528.899 528.899">
-                <use xlink:href="#edit"></use>
-              </svg>
-            </a>
-            <a class="del-btn j_del-btn">
-              <svg class="func-icon" viewbox="0 0 459 459">
-                <use xlink:href="#del"></use>
-              </svg>
-            </a>
-          </div>
-          <div class="clear"></div>
-        </div>
-      </div>
-      <div class="date-list-container j_date-list-container">
-        <div class="date-block j_date-block">
-          <p class="date-block-text j_date-block-text">2017年8月3日</p>
-        </div>
-        <div class="list-item j_list-item">
-          <div class="left-container">
-            <p>如果可以飞檐走壁哈哈哈早上还是大太阳下午就下大雨了天空好蓝啊哈哈哈哈但是我要呆在家里好难受啊</p>
-          </div>
-          <div class="right-container">
-            <a class="edit-btn j_edit-btn">
-              <svg class="func-icon" viewbox="0 0 528.899 528.899">
-                <use xlink:href="#edit"></use>
-              </svg>
-            </a>
-            <a class="del-btn j_del-btn">
-              <svg class="func-icon" viewbox="0 0 459 459">
-                <use xlink:href="#del"></use>
-              </svg>
-            </a>
-          </div>
-          <div class="clear"></div>
-        </div>
-        <div class="list-item j_list-item">
-          <div class="left-container">
-            <p>如果可以飞檐走壁哈哈哈早上还是大太阳下午就下大雨了天空好蓝啊哈哈哈哈但是我要呆在家里好难受啊</p>
-          </div>
-          <div class="right-container">
-            <a class="edit-btn j_edit-btn">
-              <svg class="func-icon" viewbox="0 0 528.899 528.899">
-                <use xlink:href="#edit"></use>
-              </svg>
-            </a>
-            <a class="del-btn j_del-btn">
-              <svg class="func-icon" viewbox="0 0 459 459">
-                <use xlink:href="#del"></use>
-              </svg>
-            </a>
-          </div>
-          <div class="clear"></div>
-        </div>
-        <div class="list-item j_list-item">
-          <div class="left-container">
-            <p>如果可以飞檐走壁哈哈哈早上还是大太阳下午就下大雨了天空好蓝啊哈哈哈哈但是我要呆在家里好难受啊</p>
-          </div>
-          <div class="right-container">
-            <a class="edit-btn j_edit-btn">
-              <svg class="func-icon" viewbox="0 0 528.899 528.899">
-                <use xlink:href="#edit"></use>
-              </svg>
-            </a>
-            <a class="del-btn j_del-btn">
-              <svg class="func-icon" viewbox="0 0 459 459">
-                <use xlink:href="#del"></use>
-              </svg>
-            </a>
-          </div>
-          <div class="clear"></div>
-        </div>
-        <div class="list-item j_list-item">
-          <div class="left-container">
-            <p>如果可以飞檐走壁哈哈哈早上还是大太阳下午就下大雨了天空好蓝啊哈哈哈哈但是我要呆在家里好难受啊</p>
-          </div>
-          <div class="right-container">
-            <a class="edit-btn j_edit-btn">
-              <svg class="func-icon" viewbox="0 0 528.899 528.899">
-                <use xlink:href="#edit"></use>
-              </svg>
-            </a>
-            <a class="del-btn j_del-btn">
-              <svg class="func-icon" viewbox="0 0 459 459">
-                <use xlink:href="#del"></use>
-              </svg>
-            </a>
-          </div>
-          <div class="clear"></div>
-        </div>
-      </div>
-      <div class="date-list-container j_date-list-container">
-        <div class="date-block j_date-block">
-          <p class="date-block-text j_date-block-text">2017年8月8日</p>
-        </div>
-        <div class="list-item j_list-item">
-          <div class="left-container">
-            <p>如果可以飞檐走壁哈哈哈早上还是大太阳下午就下大雨了天空好蓝啊哈哈哈哈但是我要呆在家里好难受啊</p>
-          </div>
-          <div class="right-container">
-            <a class="edit-btn j_edit-btn">
-              <svg class="func-icon" viewbox="0 0 528.899 528.899">
-                <use xlink:href="#edit"></use>
-              </svg>
-            </a>
-            <a class="del-btn j_del-btn">
-              <svg class="func-icon" viewbox="0 0 459 459">
-                <use xlink:href="#del"></use>
-              </svg>
-            </a>
-          </div>
-          <div class="clear"></div>
-        </div>
-        <div class="list-item j_list-item">
-          <div class="left-container">
-            <p>如果可以飞檐走壁哈哈哈早上还是大太阳下午就下大雨了天空好蓝啊哈哈哈哈但是我要呆在家里好难受啊</p>
-          </div>
-          <div class="right-container">
-            <a class="edit-btn j_edit-btn">
-              <svg class="func-icon" viewbox="0 0 528.899 528.899">
-                <use xlink:href="#edit"></use>
-              </svg>
-            </a>
-            <a class="del-btn j_del-btn">
-              <svg class="func-icon" viewbox="0 0 459 459">
-                <use xlink:href="#del"></use>
-              </svg>
-            </a>
-          </div>
-          <div class="clear"></div>
-        </div>
-        <div class="list-item j_list-item">
-          <div class="left-container">
-            <p>如果可以飞檐走壁哈哈哈早上还是大太阳下午就下大雨了天空好蓝啊哈哈哈哈但是我要呆在家里好难受啊</p>
-          </div>
-          <div class="right-container">
-            <a class="edit-btn j_edit-btn">
-              <svg class="func-icon" viewbox="0 0 528.899 528.899">
-                <use xlink:href="#edit"></use>
-              </svg>
-            </a>
-            <a class="del-btn j_del-btn">
-              <svg class="func-icon" viewbox="0 0 459 459">
-                <use xlink:href="#del"></use>
-              </svg>
-            </a>
-          </div>
-          <div class="clear"></div>
-        </div>
-        <div class="list-item j_list-item">
-          <div class="left-container">
-            <p>如果可以飞檐走壁哈哈哈早上还是大太阳下午就下大雨了天空好蓝啊哈哈哈哈但是我要呆在家里好难受啊</p>
-          </div>
-          <div class="right-container">
-            <a class="edit-btn j_edit-btn">
-              <svg class="func-icon" viewbox="0 0 528.899 528.899">
-                <use xlink:href="#edit"></use>
-              </svg>
-            </a>
-            <a class="del-btn j_del-btn">
-              <svg class="func-icon" viewbox="0 0 459 459">
-                <use xlink:href="#del"></use>
-              </svg>
-            </a>
-          </div>
-          <div class="clear"></div>
-        </div>
-      </div>
-      <div class="date-list-container j_date-list-container">
-        <div class="date-block j_date-block">
-          <p class="date-block-text j_date-block-text">2017年8月18日</p>
-        </div>
-        <div class="list-item j_list-item">
-          <div class="left-container">
-            <p>如果可以飞檐走壁哈哈哈早上还是大太阳下午就下大雨了天空好蓝啊哈哈哈哈但是我要呆在家里好难受啊</p>
-          </div>
-          <div class="right-container">
-            <a class="edit-btn j_edit-btn">
-              <svg class="func-icon" viewbox="0 0 528.899 528.899">
-                <use xlink:href="#edit"></use>
-              </svg>
-            </a>
-            <a class="del-btn j_del-btn">
-              <svg class="func-icon" viewbox="0 0 459 459">
-                <use xlink:href="#del"></use>
-              </svg>
-            </a>
-          </div>
-          <div class="clear"></div>
-        </div>
-        <div class="list-item j_list-item">
-          <div class="left-container">
-            <p>如果可以飞檐走壁哈哈哈早上还是大太阳下午就下大雨了天空好蓝啊哈哈哈哈但是我要呆在家里好难受啊</p>
-          </div>
-          <div class="right-container">
-            <a class="edit-btn j_edit-btn">
-              <svg class="func-icon" viewbox="0 0 528.899 528.899">
-                <use xlink:href="#edit"></use>
-              </svg>
-            </a>
-            <a class="del-btn j_del-btn">
-              <svg class="func-icon" viewbox="0 0 459 459">
-                <use xlink:href="#del"></use>
-              </svg>
-            </a>
-          </div>
-          <div class="clear"></div>
-        </div>
-        <div class="list-item j_list-item">
-          <div class="left-container">
-            <p>如果可以飞檐走壁哈哈哈早上还是大太阳下午就下大雨了天空好蓝啊哈哈哈哈但是我要呆在家里好难受啊</p>
-          </div>
-          <div class="right-container">
-            <a class="edit-btn j_edit-btn">
-              <svg class="func-icon" viewbox="0 0 528.899 528.899">
-                <use xlink:href="#edit"></use>
-              </svg>
-            </a>
-            <a class="del-btn j_del-btn">
-              <svg class="func-icon" viewbox="0 0 459 459">
-                <use xlink:href="#del"></use>
-              </svg>
-            </a>
-          </div>
-          <div class="clear"></div>
-        </div>
-        <div class="list-item j_list-item">
-          <div class="left-container">
-            <p>如果可以飞檐走壁哈哈哈早上还是大太阳下午就下大雨了天空好蓝啊哈哈哈哈但是我要呆在家里好难受啊</p>
+            <p>{{ item.content }}</p>
           </div>
           <div class="right-container">
             <a class="edit-btn j_edit-btn">
@@ -329,7 +44,23 @@
         </div>
       </div>
     </div>
+
+    <div class="add-item-btn" @click="showAddPanel = true">
+      ADD
+    </div>
+
+    <!-- <div class="test-item-btn" @click="test()">
+      test
+    </div> -->
+
+    <div class="input-panel" v-if="showAddPanel">
+      <textarea class="new-item-input" v-model="content" autofocus></textarea>
+      <div class="add-btn" @click="addItem()">
+        <p>Sure</p>
+      </div>
+    </div>
   </div>
+
 </body>
 <script src="zepto.min.js"></script>
 <script src="https://unpkg.com/vue"></script>

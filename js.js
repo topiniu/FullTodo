@@ -5,12 +5,44 @@ var root = new Vue({
       msg: 'pp',
       everyListHeight: [],
       everyListScrollTop: [],
+      items: {},
       itemList: [],
+
+      showAddPanel:false,
     }
+  },
+  methods:{
+    delete(){
+
+    },
+    addItem(){
+      const self = this;
+      self.items.push({
+        content: self.content,
+        date: new Date().getFullYear + '-' + new Date().getMonth + '-' + new Date().getDay(),
+        isFinished: false,
+      });
+      this.showAddPanel = false;
+    },
   },
   created() {
     const self = this;
-
+    
+    $.ajax({
+      url: 'testdata.json',
+      data: '',
+      dataType: 'JSON',
+      type:'GET',
+      success: function(data){
+        self.items = JSON.parse(data);
+      },
+      error:function(err){
+        alert('Something wrong 哈哈哈哈');
+      }
+    })
+  },
+  updated(){
+    const self = this;
     var s = $('.j_date-list-container');
     var totalHeight = 0;
     for (var i = 0; i < s.length; i++) {
@@ -29,13 +61,19 @@ var root = new Vue({
         $('.j_date-block').removeClass('fixed-top');
         topIndex = -1;
       }
-      for (var i = 0; i < self.everyListHeight.length - 1; i++) {
-        if (i !== topIndex && $(window).scrollTop() < self.everyListScrollTop[i + 1] && $(window).scrollTop() > self.everyListScrollTop[i]) {
+      for (var i = 0; i < self.everyListHeight.length; i++) {
+        
+        if ((i !== topIndex && $(window).scrollTop() < self.everyListScrollTop[i + 1] && $(window).scrollTop() > self.everyListScrollTop[i])) {
           $('.j_date-block').removeClass('fixed-top');
           $('.j_date-list-container').eq(i).find('.j_date-block').addClass('fixed-top');
           topIndex = i;
+        }else if($(window).scrollTop() > self.everyListScrollTop[self.everyListScrollTop.length-1]){
+          $('.j_date-block').removeClass('fixed-top');
+          $('.j_date-list-container').eq(self.everyListScrollTop.length-1).find('.j_date-block').addClass('fixed-top');
+          topIndex = self.everyListScrollTop.length-1;
         }
       }
     });
+
   }
 })

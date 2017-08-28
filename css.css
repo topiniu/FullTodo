@@ -90,3 +90,73 @@ body {
   width: 100%;
   transition: all .3s;
 }
+
+.item-fade-enter-active, .item-fade-leave-active{
+  transition: all .3s;
+}
+.item-fade-enter, .item-leave-to{
+  opacity: 0;
+  transform: translate(50px,0);
+}
+.item-enter-to, .item-leave{
+  opacity: 1;
+  transform: translate(0,0);
+}
+
+.add-item-btn, .test-item-btn{
+  width: 60px;
+  height: 25px;
+  background-color: red;
+  color: white;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  border-radius: 10px;
+  font-size: 14px;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 24px;
+}
+.test-item-btn{
+  left: 10px;
+  right: auto;
+}
+.input-panel{
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.8);
+  z-index: 9;
+}
+.new-item-input{
+  width: 95%;
+  min-height: 100px;
+  position: absolute;
+  top: 10px;
+  border-radius: 10px;
+
+  left: 50%;
+  transform: translate(-50%,0);
+}
+.add-btn{
+  width: 95%;
+  height: 45px;
+  background-color: white;
+  position: absolute;
+  bottom: 10px;
+  border-radius: 10px;
+  text-align: center;
+  line-height: 42px;
+
+  left: 50%;
+  transform: translate(-50%,0);
+}
+.add-btn p{
+  font-size: 14px;
+  background-color: white;
+  color: black;
+  height: 45px;
+  display: inline;
+  margin: 0;
+}
