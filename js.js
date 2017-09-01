@@ -12,8 +12,8 @@ var root = new Vue({
     }
   },
   methods:{
-    delete(){
-
+    del(item){
+      item.isFinished = true;
     },
     addItem(){
       const self = this;

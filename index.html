@@ -24,8 +24,9 @@
         <div class="date-block j_date-block">
           <p class="date-block-text j_date-block-text">{{ key }}</p>
         </div>
-        <div class="list-item j_list-item" v-for="item in value">
-          <div class="left-container">
+        <transition-group name="item-fade" tag="div">
+        <div class="list-item j_list-item" v-for="item in value" :key="item.date" v-if="!item.isFinished">
+          <div class="left-container" @click="del(item)">
             <p>{{ item.content }}</p>
           </div>
           <div class="right-container">
@@ -42,6 +43,7 @@
           </div>
           <div class="clear"></div>
         </div>
+      </transition-group>
       </div>
     </div>
 
@@ -63,7 +65,7 @@
 
 </body>
 <script src="zepto.min.js"></script>
-<script src="https://unpkg.com/vue"></script>
+<script src="vue.js"></script>
 <script src="js.js"></script>
 
 </html>

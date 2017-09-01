@@ -94,13 +94,12 @@ body {
 .item-fade-enter-active, .item-fade-leave-active{
   transition: all .3s;
 }
-.item-fade-enter, .item-leave-to{
-  opacity: 0;
-  transform: translate(50px,0);
+.item-fade-enter, .item-fade-leave-active{
+  /* opacity: 0; */
+  transform: translateY(50px);
 }
-.item-enter-to, .item-leave{
-  opacity: 1;
-  transform: translate(0,0);
+.item-fade-leave-active{
+  position: absolute;
 }
 
 .add-item-btn, .test-item-btn{
