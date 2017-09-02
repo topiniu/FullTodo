@@ -80,7 +80,7 @@ $("#names").on("click",function(){
     });
 })
 ```  
-2.  获取某用户的待办事项  
+2.  获取某用户的待办事项
 ```
 $("#todolist").on("click",function(){
     var map = {
@@ -92,7 +92,7 @@ $("#todolist").on("click",function(){
     });
 })
 ```  
-3.  添加用户列表  
+3.  添加用户列表
 ```
 $("#adduser").on("click",function(){
     var map = {
@@ -104,12 +104,28 @@ $("#adduser").on("click",function(){
     });
 })
 ```  
-4. 添加某用户的待办事项数据  
+4. 添加某用户的待办事项数据
 ```
+var jsonData = 
+`{ //字符串
+    "2017-08-02":[
+        {
+            "content":"test",
+            "data":"2017-08-02",
+            "isFinished":false
+        },
+        {
+            "content":"test",
+            "data":"2017-08-02",
+            "isFinished":false
+        },
+    ]
+}`
+
 $("#addtodolist").on("click",function(){
     var map = {
         names :'ching',
-        todoList:jsonData3,
+        todoList:jsonData,
     };
     url = "http://127.0.0.1:8080/addtodolist",
     $.post(url, map , function(data) {
