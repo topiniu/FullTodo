@@ -124,7 +124,7 @@ var jsonData =
 
 $("#addtodolist").on("click",function(){
     var map = {
-        names :'ching',
+        name :'ching',
         todoList:jsonData,
     };
     url = "http://127.0.0.1:8080/addtodolist",
