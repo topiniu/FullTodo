@@ -24,26 +24,28 @@
         <div class="date-block j_date-block">
           <p class="date-block-text j_date-block-text">{{ key }}</p>
         </div>
-        <transition-group name="item-fade" tag="div">
-        <div class="list-item j_list-item" v-for="item in value" :key="item.date" v-if="!item.isFinished">
-          <div class="left-container" @click="del(item)">
-            <p>{{ item.content }}</p>
-          </div>
-          <div class="right-container">
-            <a class="edit-btn j_edit-btn">
-              <svg class="func-icon" viewbox="0 0 528.899 528.899">
-                <use xlink:href="#edit"></use>
-              </svg>
-            </a>
-            <a class="del-btn j_del-btn">
-              <svg class="func-icon" viewbox="0 0 459 459">
-                <use xlink:href="#del"></use>
-              </svg>
-            </a>
-          </div>
-          <div class="clear"></div>
-        </div>
-      </transition-group>
+      <ul>
+        <transition-group name="item-fade" tag="p">
+          <li class="list-item j_list-item" v-for="(item, index) in value"  v-bind:key="item.id" v-if="!item.isFinished">
+            <div class="left-container" @click="del(item, index, key)">
+              <p>{{ item.content }}</p>
+            </div>
+            <div class="right-container">
+              <a class="func-btn edit-btn j_edit-btn">
+                <svg class="func-icon" viewbox="0 0 528.899 528.899">
+                  <use xlink:href="#edit"></use>
+                </svg>
+              </a>
+              <a class="func-btn del-btn j_del-btn">
+                <svg class="func-icon" viewbox="0 0 459 459">
+                  <use xlink:href="#del"></use>
+                </svg>
+              </a>
+            </div>
+            <div class="clear"></div>
+          </li>
+        </transition-group>
+      </ul>
       </div>
     </div>
 

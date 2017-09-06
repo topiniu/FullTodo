@@ -42,19 +42,25 @@ body {
   line-height: 7px;
   border-right: 1px solid black;
 }
-
+ul{
+  padding:0; 
+}
 .list-item {
-  display: flex;
-  align-items: center;
+  display: block;
+  list-style: none;
+  position: relative;
+  /* align-items: center; */
   /* padding-left: 5px; */
-  justify-content: space-between;
+  /* justify-content: space-between; */
   padding: 0 10px;
   background: #66BAB7;
   margin: 10px 0;
 }
 
 .left-container {
-  width: 300px;
+  display: block;
+  min-width: 300px;
+  float: left;
 }
 
 .left-container p {
@@ -65,7 +71,12 @@ body {
 .right-container {
   width: 55px;
   display: flex;
-  justify-content: space-between;
+  float: right;    
+  position: absolute;
+  top: 50%;
+  transform: translate(0,-50%);
+  right: 0;
+  /* justify-content: space-between; */
   border-left: 1px solid rgba(255, 255, 255, 0.5);
   padding-left: 10px;
 }
@@ -92,14 +103,14 @@ body {
 }
 
 .item-fade-enter-active, .item-fade-leave-active{
-  transition: all .3s;
+  transition: all .3s ease;
 }
 .item-fade-enter, .item-fade-leave-active{
-  /* opacity: 0; */
+  opacity: 0;
   transform: translateY(50px);
 }
 .item-fade-leave-active{
-  position: absolute;
+  /* position: absolute; */
 }
 
 .add-item-btn, .test-item-btn{
@@ -155,7 +166,11 @@ body {
   font-size: 14px;
   background-color: white;
   color: black;
-  height: 45px;
+  /* height: 45px; */
   display: inline;
   margin: 0;
+}
+.func-btn{
+  display: inline-block;
+  flex: 1;
 }

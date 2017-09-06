@@ -12,7 +12,10 @@ var root = new Vue({
     }
   },
   methods:{
-    del(item){
+    del(item, index, key){
+      console.log('haha');
+      const self = this;
+      console.log(self.items.key);
       item.isFinished = true;
     },
     addItem(){
@@ -35,6 +38,9 @@ var root = new Vue({
       type:'GET',
       success: function(data){
         self.items = JSON.parse(data);
+        // self.items.foreach(function(k,v){
+          
+        // })
       },
       error:function(err){
         alert('Something wrong 哈哈哈哈');
